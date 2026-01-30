@@ -19,6 +19,10 @@ history.forEach(item => {
     // div.addEventListener("click", () => {
     //     window.location.href = `search.html?q=${encodeURIComponent(item.query)}`;
     // });
-    console.log("container",container);
+    div.addEventListener("click", () => {
+        window.location.href = `search.html?q=${encodeURIComponent(item.query)}`;
+    });
+    // console.log("container",container);
     container.appendChild(div);
+
 });
