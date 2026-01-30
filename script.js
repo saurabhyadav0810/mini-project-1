@@ -81,7 +81,7 @@ searchInput.addEventListener("input", () => {
     matches.forEach(item => {
         const div = document.createElement("div");
         div.className = "suggestion-item";
-        div.innertext = item.query;
+        div.innerText = item.query;
 
         div.addEventListener("click", () => {
             searchInput.value = item.query;
@@ -92,3 +92,8 @@ searchInput.addEventListener("input", () => {
     });
     });
 
+
+const historyBtn = document.getElementById("historyList");
+historyBtn.addEventListener("click", () => {
+    window.location.href = "searchhistory.html";
+});
