@@ -4,10 +4,14 @@
     margin: 0 auto;
     padding: 0 10px;
     display: flex;
+    background-color: #e6e6e6;
 }
 
 #thumbnail{
     width: 100%;
+}
+h1{
+    text-align: center;
 }
 
 #title{
@@ -20,13 +24,35 @@ font-weight: bold;
     display: flex;
     flex-direction: column;
     gap:25px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 li{
     font-size: medium;
     list-style-type: none;
+    padding: 3px 0;
 }   
-/* 
-.imp{
-    padding-bottom: 0px;
-} */
+
+#avalilability{
+    background-color: rgb(99, 181, 99);
+    width:80px;
+    text-align: center;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
+#price{
+    color: rgb(206, 6, 6);
+    font-weight: bold;
+}
+
+#description{
+    color:rgb(84, 83, 83);
+}
+
+.tag{
+    border: 1px solid rgb(66, 65, 65);
+    padding: 2px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: rgb(66, 65, 65);
+}
+
