@@ -22,6 +22,7 @@ fetch("https://dummyjson.com/products")
         return;
     }
     renderPage();
+    
 })
 .catch(err => console.log(err));
 
@@ -44,6 +45,7 @@ function renderPage(){
             window.location.href = `products.html?id=${product.id}`;
         });
         container.appendChild(card);
+
     });
     
     
@@ -126,3 +128,8 @@ const historyBtn = document.getElementById("historyList");
 historyBtn.addEventListener("click", () => {
     window.location.href = "searchhistory.html";
 });
+const viewHistoryBtn = document.getElementById("viewhistory");
+viewHistoryBtn.addEventListener("click", () => {
+    window.location.href = "viewhistory.html";
+});
+

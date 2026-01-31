@@ -7,6 +7,7 @@ console.log(param);
 fetch(`https://dummyjson.com/products/${productId}`)
 .then(res=> res.json())
 .then(product => {
+    saveViewedProduct(product);
      console.log("Product details:", product);
      document.getElementById("title").innerText = product.title; 
      document.getElementById("thumbnail").src = product.thumbnail;
@@ -38,3 +39,22 @@ fetch(`https://dummyjson.com/products/${productId}`)
     });
 })
 
+function saveViewedProduct(product) {
+    let viewedProducts = JSON.parse(localStorage.getItem("viewedProducts")) || [];
+
+    // remove duplicate if already viewed
+    viewedProducts = viewedProducts.filter(p => p.id !== product.id);
+
+    viewedProducts.unshift({
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        thumbnail: product.thumbnail,
+        viewedAt: new Date().toISOString()
+    });
+
+    // optional: limit history to last 10 items
+    viewedProducts = viewedProducts.slice(0, 10);
+
+    localStorage.setItem("viewedProducts", JSON.stringify(viewedProducts));
+}

@@ -80,3 +80,10 @@ h1{
 .searchb{
     margin-left: 80px;
 }
+
+.empty-message {
+        text-align: center;
+        padding: 40px;
+        color: #999;
+        font-size: 18px;
+      }
