@@ -13,13 +13,6 @@ fetch(`https://dummyjson.com/products/${productId}`)
      document.getElementById("price").innerText = `₹ ${product.price}`;
      document.getElementById("description").innerText = product.description;
      document.getElementById("avalilability").innerText = product.availabilityStatus;
-
-    //  document.getElementById("brand").innerText = product.brand;
-    // document.getElementById("category").innerText = product.category;
-    // document.getElementById("rating").innerText = product.rating;
-    // document.getElementById("stock").innerText = product.stock;
-    // document.getElementById("SKU").innerText = product.sku;
-    // document.getElementById("weight").innerText = product.weight;
     
     let details = document.getElementById("details");
     details.innerHTML = `
